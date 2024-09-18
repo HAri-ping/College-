@@ -3,3 +3,22 @@ body{
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
+
+
+div {
+  align-items: center;
+  background-color: rgba(35, 35, 35, 0.1);
+  border: 1px solid rgba(235, 235, 235, 0.1);
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  font-size: clamp(12px, 3vw, 2rem);
+  font-weight: 300;
+  letter-spacing: .375ch;
+  justify-content: center;
+  height: 27.35vh;
+  margin: auto;
+  position: relative;
+  text-transform: uppercase;
+  width: 27.35vw;
+}
