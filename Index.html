@@ -2,17 +2,97 @@
 <html>
 <head>
 <style>
+div {
+  align-items: center;
+  background-color: rgba(35, 35, 35, 0.1);
+  border: 1px solid rgba(235, 235, 235, 0.1);
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  font-size: clamp(12px, 3vw, 2rem);
+  font-weight: 300;
+  letter-spacing: .375ch;
+  justify-content: center;
+  height: 27.35vh;
+  margin: auto;
+  position: relative;
+  text-transform: uppercase;
+  width: 27.35vw;
+}
 
 body{
     background-image: url("jorgen-hendriksen-FxuKYyiH_sI-unsplash.jpg");
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
+input[type="text"] {
+width: 220px;
+padding: 10px;
+margin: 10px;
+border: 3px solid #dad;
+border-radius: 5px;
+}
+h1 {
+margin:10px;
+}
+button {
+padding: 10px 18px;
+margin: 10px;
+border: none;
+background-color: #007baa;
+color: white;
+font-size:18px;
+font-weight:bold;
+border-radius: 5px;
+cursor: pointer;}
+button:hover {
+background-color: #bb99cc;
+}
 </style>
 <link rel="stylesheet" href="style.css">
 </head>
   <body>
-    <h1>hello</h1>
-<h2>GUYS</h2>
+<div>
+<fieldset style=”width:270px”><legend><h2>Simple Calculator</h2></legend>
+<input type="text" id="num1" placeholder="Enter first number">
+<br>
+<input type="text" id="num2" placeholder="Enter second number">
+<br>
+<button onclick="add()">+</button>
+<button onclick="subtract()">-</button>
+<button onclick="multiply()">x</button>
+<button onclick="divide()">/</button>
+<br>
+<input type="text" id="result" placeholder="Result" readonly>
+</fieldset>
+
+
+
+</div>
+<script>
+function add() {
+let num1 = parseFloat(document.getElementById('num1').value);
+let num2 = parseFloat(document.getElementById('num2').value);
+document.getElementById('result').value = num1 + num2;
+}
+function subtract() {
+let num1 = parseFloat(document.getElementById('num1').value);
+let num2 = parseFloat(document.getElementById('num2').value);
+document.getElementById('result').value = num1 - num2;
+}
+function multiply() {
+let num1 = parseFloat(document.getElementById('num1').value);
+let num2 = parseFloat(document.getElementById('num2').value);
+document.getElementById('result').value = num1 * num2;
+}
+function divide() {
+let num1 = parseFloat(document.getElementById('num1').value);
+let num2 = parseFloat(document.getElementById('num2').value);
+if (num2 === 0) {
+alert("Cannot divide by zero");
+} else {
+document.getElementById('result').value = num1 / num2;
+}
+}</script>
   </body>
 </html>
