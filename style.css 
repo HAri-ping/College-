@@ -1,3 +1,5 @@
-Body {
-
-} 
+body{
+    background-image: url("");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
